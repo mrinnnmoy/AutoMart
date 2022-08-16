@@ -22,7 +22,7 @@ if (navClose) {
 /*=============== REMOVE MENU MOBILE ===============*/
 const navLink = document.querySelectorAll('.nav__link')
 
-const linkAction = () =>{
+const linkAction = () => {
     const navMenu = document.getElementById('nav-menu')
     // When we click on each nav__link, we remove the show-menu class
     navMenu.classList.remove('show-menu')
@@ -31,21 +31,21 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
-const scrollHeader = () =>{
+const scrollHeader = () => {
     const header = document.getElementById('header')
     // When the scroll is greater than 50 viewport height, add the scroll-header class to the header tag
-    this.scrollY >= 50 ? header.classList.add('scroll-header') 
-                       : header.classList.remove('scroll-header')
+    this.scrollY >= 50 ? header.classList.add('scroll-header')
+        : header.classList.remove('scroll-header')
 }
 window.addEventListener('scroll', scrollHeader)
 
 
 /*=============== POPULAR SWIPER ===============*/
-let swiperPopular = new Swiper(".popular__container",{
+let swiperPopular = new Swiper(".popular__container", {
     loop: true,
     spaceBetween: 24,
-    slidesPerView : 'auto',
-    grabCursor : true,
+    slidesPerView: 'auto',
+    grabCursor: true,
 
     pagination: {
         el: ".swiper-pagination",
@@ -53,8 +53,8 @@ let swiperPopular = new Swiper(".popular__container",{
     },
     breakpoints: {
         768: {
-            slidesPerView : 3,
-           
+            slidesPerView: 3,
+
         },
         1024: {
             spaceBetween: 48,
@@ -63,7 +63,7 @@ let swiperPopular = new Swiper(".popular__container",{
 });
 
 /*=============== MIXITUP FILTER FEATURED ===============*/
-let mixerFeatured = mixitup('.featured__content',{
+let mixerFeatured = mixitup('.featured__content', {
     selectors: {
         target: '.featured__card'
     },
@@ -75,14 +75,19 @@ let mixerFeatured = mixitup('.featured__content',{
 /* Link active featured */
 const linkFeatured = document.querySelectorAll('.featured__item')
 
-function activeFeatured(){
+function activeFeatured() {
     linkFeatured.forEach(l => l.classList.remove('active-featurred'))
     this.classList.add('active-featured')
 }
-linkFeatured.forEach(l => l.addEventListener('click', active-featured))
+linkFeatured.forEach(l => l.addEventListener('click', active - featured))
 
 /*=============== SHOW SCROLL UP ===============*/
-
+function scrollUp() {
+    const scrollUp = document.getElementById('scroll-up');
+    //  When the scroll is higher than 350 viewport height, add the show scroll class to the a tag with the scrollup class
+    if (this.scrollY >= 350) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('showscroll')
+}
+window.addEventListener('scroll', scrollUp)
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
